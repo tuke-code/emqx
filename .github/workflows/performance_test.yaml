@@ -75,7 +75,7 @@ jobs:
       run: |
         set -xeuo pipefail
         # get latest emqx version
-        version=$(gh release list --limit 1 --json tagName --jq '.[] | .tagName')
+        version=$(gh release list --repo emqx/emqx --limit 1 --json tagName --jq '.[] | .tagName')
         # remove 'v' prefix from the version
         version=${version:1}
         wget https://www.emqx.com/en/downloads/enterprise/${version}/emqx-enterprise-${version}-ubuntu22.04-amd64.deb
