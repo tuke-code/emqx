@@ -73,6 +73,7 @@ jobs:
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
+        set -xeuo pipefail
         # get latest emqx version
         version=$(gh release list --limit 1 --json tagName --jq '.[] | .tagName')
         # remove 'v' prefix from the version
