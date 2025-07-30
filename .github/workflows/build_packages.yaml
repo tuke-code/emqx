@@ -110,19 +110,20 @@ jobs:
         profile:
           - ${{ inputs.profile }}
         os:
-          - ubuntu24.04
-          - ubuntu22.04
-          - ubuntu20.04
-          - debian12
-          - debian11
-          - debian10
-          - el9
-          - el8
-          - el7
-          - amzn2
-          - amzn2023
+          # - ubuntu24.04
+          # - ubuntu22.04
+          # - ubuntu20.04
+          - ubuntu18.04
+          # - debian12
+          # - debian11
+          # - debian10
+          # - el9
+          # - el8
+          # - el7
+          # - amzn2
+          # - amzn2023
         arch:
-          - amd64
+          # - amd64
           - arm64
         with_elixir:
           - 'no'
